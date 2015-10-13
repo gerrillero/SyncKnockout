@@ -1,0 +1,51 @@
+﻿@model SyncKnockout.Models.ActiviteitViewModel
+@using System.Activities.Expressions;
+@using System.Web.Script.Serialization;
+
+
+@{
+    ViewBag.Title = "Activiteit";
+
+    var data = new JavaScriptSerializer().Serialize(Model);
+}
+
+<h2>@ViewBag.Title.</h2>
+<form method="post">
+    <input class="form-control" type="text" data-bind="value: Onderwerp" />
+    <br />
+    <input id="UitgevoerdVoor" data-bind='ejDropDownList:{ dataSource: dataGebruikers, fields: { id: "Id", text: "Gebruikersnaam", value: "Id" }, value: dataUitgevoerdVoor, showCheckbox: true, allowMultiSelection: true, width: "400px" }'>
+    <br />
+    <input class="btn btn-primary" type="submit" data-bind="click: Save" value="Save" />
+</form>
+
+@section scripts {
+
+    <script src="~/Scripts/activiteitViewModel.js"></script>
+    <script type="text/javascript">
+
+        //$(function () {
+            // DataManager creation
+            //var dataManger = ej.DataManager({
+              //  url: "/Home/Gebruikers/"
+            //});
+            // Query creation
+            //var query = ej.Query()
+            //    .from("Customers").take(6);
+
+            //$('#dropdownlist').ejDropDownList({
+            //    dataSource: dataManger,
+            //    fields: {
+            //        text: "CustomerID"
+            //    },
+            //    query: query,
+            //});
+        //});
+
+
+        var activiteitViewModel = new ActiviteitViewModel(@Html.Raw(data));
+        ko.applyBindings(activiteitViewModel);
+  
+
+</script>
+
+}
