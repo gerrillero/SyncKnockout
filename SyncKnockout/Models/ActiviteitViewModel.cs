@@ -11,6 +11,7 @@ namespace SyncKnockout.Models
         public Guid Id { get; set; }
         public String Onderwerp { get; set; }
         public String UitgevoerdVoor { get; set; }
-        public IEnumerable<ActiviteitGebruikerViewModel> Gebruikers { get; set; }
+        public List<ActiviteitGebruikerViewModel> Gebruikers { get; set; }
+        public List<ActiviteitBestedeTijd> Tijden { get; set; }
     }
 }

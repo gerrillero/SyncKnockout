@@ -15,6 +15,9 @@
     <br />
     <input id="UitgevoerdVoor" data-bind='ejDropDownList:{ dataSource: dataGebruikers, fields: { id: "Id", text: "Gebruikersnaam", value: "Id" }, value: dataUitgevoerdVoor, showCheckbox: true, allowMultiSelection: true, width: "400px" }'>
     <br />
+    <div id="GridTijden" data-bind="ejGrid: { dataSource: dataTijden }">
+    </div>
+    <br />
     <input class="btn btn-primary" type="submit" data-bind="click: Save" value="Save" />
 </form>
 

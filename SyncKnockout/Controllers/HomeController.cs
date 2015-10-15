@@ -28,6 +28,13 @@ namespace SyncKnockout.Controllers
             model.Gebruikers = gebruikers;
             model.UitgevoerdVoor = "693a4ada-e919-4e20-900b-0bd4de7aa40c,507d5f41-8f0f-478e-9ff0-817e12c83364";
 
+            List<ActiviteitBestedeTijd> tijden = new List<ActiviteitBestedeTijd>();
+            tijden.Add(new ActiviteitBestedeTijd { Id = 1, Testenum = TestEnum.test1, Oms = "Test descnbak" });
+            tijden.Add(new ActiviteitBestedeTijd { Id = 2,  Testenum = TestEnum.test2, Oms = "" });
+            tijden.Add(new ActiviteitBestedeTijd { Id = 3, Testenum = TestEnum.test3, Oms = "Tak asdh iasdhiashfd iai sadhfiasgdfiuasgdiuf." });
+
+            model.Tijden = tijden;
+
             return View(model);
         }
 
@@ -43,10 +50,10 @@ namespace SyncKnockout.Controllers
         public ActionResult Bestand()
         {
 
-
-
             return View();
         }
+
+
 
     }
 }
