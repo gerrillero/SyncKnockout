@@ -4,21 +4,46 @@
 }
 
 <h2>Bestand</h2>
-<div id="Grid" data-bind="ejGrid: { dataSource: dataSource, columns: column, toolbarSettings: {showToolbar: true,toolbarItems: tool}, editSettings: {allowEditing: true,allowAdding: true,allowDeleting: true}, allowGrouping: true, allowSorting: true, allowPaging: true, allowFiltering: true }"></div>
+
+@*<div id="Grid" data-bind="ejGrid: { dataSource: dataSource }"></div>*@
+<div id="Grid" data-bind="ejGrid: { dataSource: dataSource, toolbarSettings: {showToolbar: true,toolbarItems: ['add', 'edit', 'delete', 'cancel'] }, editSettings: {allowEditing: true,allowAdding: true,allowDeleting: true}, allowGrouping: true, allowSorting: true, allowPaging: true, allowFiltering: true }"></div>
 
 @section scripts {
 <script>
 
-       
-            window.employeeView = {
-                dataSource: ej.DataManager({ url: "KODataSource", adaptor: "UrlAdaptor", insertUrl: "Insert", updateUrl: "Update", removeUrl: "Remove" }),
-                column: [{ "field": "OrderID", "isPrimaryKey": true, "headerText": "OrderID", "textAlign": "right", "validationRules": { "required": true, "number": true }, "width": 90 },
-                          { "field": "CustomerID", "headerText": "CustomerID", "textAlign": "right", "validationRules": { "required": true, "minlength": 3 }, "width": 90 },
-                          { "field": "ShipCity", "headerText": "ShipCity", "textAlign": "right", "width": 90 },
-                          { "field": "ShipCountry", "headerText": "ShipCountry", "textAlign": "right", "width": 90 }],
-                tool:['add','edit','delete','update','cancel']
-            };
-            ko.applyBindings(employeeView);
+  
+        var obj = [
+             { "EmployeeID": 1, "LastName": "Davolio", "FirstName": "Nancy", "Title": "Sales Representative", "City": "Seattle", "Country": "USA" },
+             { "EmployeeID": 2, "LastName": "Fuller", "FirstName": "Andrew", "Title": "Vice President, Sales", "City": "Tacoma", "Country": "USA" },
+             { "EmployeeID": 3, "LastName": "Leverling", "FirstName": "Janet", "Title": "Sales Representative", "City": "Kirkland", "Country": "USA" },
+             { "EmployeeID": 4, "LastName": "Peacock", "FirstName": "Margaret", "Title": "Sales Representative", "City": "Redmond", "Country": "USA" },
+             { "EmployeeID": 5, "LastName": "Buchanan", "FirstName": "Steven", "Title": "Sales Manager", "City": "London", "Country": "UK" },
+             { "EmployeeID": 6, "LastName": "Suyama", "FirstName": "Michael", "Title": "Sales Representative", "City": "London", "Country": "UK" },
+             { "EmployeeID": 7, "LastName": "King", "FirstName": "Robert", "Title": "Sales Representative", "City": "London", "Country": "UK" },
+             { "EmployeeID": 8, "LastName": "Callahan", "FirstName": "Laura", "Title": "Inside Sales Coordinator", "City": "Seattle", "Country": "USA" },
+             { "EmployeeID": 9, "LastName": "Dodsworth", "FirstName": "Anne", "Title": "Sales Representative", "City": "London", "Country": "UK" },
+             { "EmployeeID": 10, "LastName": "Peacock", "FirstName": "Margaret", "Title": "Sales Representative", "City": "Redmond", "Country": "USA" },
+             { "EmployeeID": 11, "LastName": "Buchanan", "FirstName": "Steven", "Title": "Sales Manager", "City": "London", "Country": "UK" },
+             { "EmployeeID": 12, "LastName": "Suyama", "FirstName": "Michael", "Title": "Sales Representative", "City": "London", "Country": "UK" },
+             { "EmployeeID": 13, "LastName": "King", "FirstName": "Robert", "Title": "Sales Representative", "City": "London", "Country": "UK" },
+             { "EmployeeID": 14, "LastName": "Callahan", "FirstName": "Laura", "Title": "Inside Sales Coordinator", "City": "Seattle", "Country": "USA" },
+             { "EmployeeID": 15, "LastName": "Dodsworth", "FirstName": "Anne", "Title": "Sales Representative", "City": "London", "Country": "UK" },
+             { "EmployeeID": 16, "LastName": "Andreas", "FirstName": "James", "Title": "Sales Representative", "City": "Tacoma", "Country": "USA" }
+
+        ];
+        //$("#sampleProperties").ejPropertiesPanel();
+        window.employeeView = {
+            dataSource: ko.observableArray(obj),
+            selectedRow: ko.observable(0),
+            currentPage: ko.observable(1),
+            //actionBegin: ko.observable(function (args) {
+            //    if (args.requestType == "grouping")
+            //        $("#selectedRow").ejNumericTextbox("option", { value: -1 });
+            //})
+        };
+        ko.applyBindings(employeeView);
+    
+
         
 </script>
 

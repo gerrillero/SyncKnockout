@@ -3,11 +3,11 @@
 ActiviteitViewModel = function (data) {
     var self = this;
     ko.mapping.fromJS(data, {}, self);
-    debugger;
+    
     dataGebruikers = ko.observable(data.Gebruikers);
     dataUitgevoerdVoor = ko.observable(data.UitgevoerdVoor);
 
-    dataTijden = ko.observableArray(data.Tijden);
+    dataTijden = ko.observable(data.Tijden);
     self.Tijden(dataTijden);
     
     self.UitgevoerdVoor(dataUitgevoerdVoor);

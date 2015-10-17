@@ -1,12 +1,14 @@
 ﻿@model SyncKnockout.Models.ActiviteitViewModel
 @using System.Activities.Expressions;
 @using System.Web.Script.Serialization;
+@using Newtonsoft.Json
 
 
 @{
     ViewBag.Title = "Activiteit";
 
-    var data = new JavaScriptSerializer().Serialize(Model);
+    //var data = new JavaScriptSerializer().Serialize(Model);
+    var data = JsonConvert.SerializeObject(Model);
 }
 
 <h2>@ViewBag.Title.</h2>
@@ -15,7 +17,8 @@
     <br />
     <input id="UitgevoerdVoor" data-bind='ejDropDownList:{ dataSource: dataGebruikers, fields: { id: "Id", text: "Gebruikersnaam", value: "Id" }, value: dataUitgevoerdVoor, showCheckbox: true, allowMultiSelection: true, width: "400px" }'>
     <br />
-    <div id="GridTijden" data-bind="ejGrid: { dataSource: dataTijden }">
+    <br />
+    <div id="GridTijden" data-bind="ejGrid: { dataSource: dataTijden, columns: gridColumns, toolbarSettings: {showToolbar: true, toolbarItems: ['add', 'edit', 'update', 'delete', 'cancel'] }, editSettings: {allowEditing: true,allowAdding: true,allowDeleting: true}, allowSorting: true }">
     </div>
     <br />
     <input class="btn btn-primary" type="submit" data-bind="click: Save" value="Save" />
@@ -25,7 +28,14 @@
 
     <script src="~/Scripts/activiteitViewModel.js"></script>
     <script type="text/javascript">
+        var testenum = [{ text: "test1", value: "text1" }, { text: "test2", value: "text2" }, { text: "test3", value: "text3" }];
 
+        var gridColumns = [
+              { field: "Id", IsPrimaryKey: true, textAlign: "right", visible: false },
+              { field: "Oms", headerText: "Oms test", editType: ej.Grid.EditingType.String },
+              { field: "Testenum", headerText: "Test enum", editType: ej.Grid.EditingType.Dropdown, dataSource: testenum, value: testenum },
+              { field: "Date", headerText: "Datum", editType: ej.Grid.EditingType.DatePicker, format: "{0:dd-MM-yyyy}" }
+        ];
         //$(function () {
             // DataManager creation
             //var dataManger = ej.DataManager({

@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace SyncKnockout.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -29,9 +29,9 @@ namespace SyncKnockout.Controllers
             model.UitgevoerdVoor = "693a4ada-e919-4e20-900b-0bd4de7aa40c,507d5f41-8f0f-478e-9ff0-817e12c83364";
 
             List<ActiviteitBestedeTijd> tijden = new List<ActiviteitBestedeTijd>();
-            tijden.Add(new ActiviteitBestedeTijd { Id = 1, Testenum = TestEnum.test1, Oms = "Test descnbak" });
-            tijden.Add(new ActiviteitBestedeTijd { Id = 2,  Testenum = TestEnum.test2, Oms = "" });
-            tijden.Add(new ActiviteitBestedeTijd { Id = 3, Testenum = TestEnum.test3, Oms = "Tak asdh iasdhiashfd iai sadhfiasgdfiuasgdiuf." });
+            tijden.Add(new ActiviteitBestedeTijd { Id = 1, Testenum = "test1", Date = DateTime.Now, Oms = "Test descnbak" });
+            tijden.Add(new ActiviteitBestedeTijd { Id = 2,  Testenum = "test2", Date = new DateTime(2015, 10, 15), Oms = "" });
+            tijden.Add(new ActiviteitBestedeTijd { Id = 3, Testenum = "test3", Date = DateTime.Now, Oms = "Tak asdh iasdhiashfd iai sadhfiasgdfiuasgdiuf." });
 
             model.Tijden = tijden;
 

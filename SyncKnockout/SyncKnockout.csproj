@@ -48,6 +48,10 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Mapping.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapping.Common.1.0.0\lib\Mapping.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -58,21 +62,33 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Syncfusion.Chart.Wpf, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Compression.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.DocIO.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.DocToPDFConverter.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.EJ, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.EJ.Export, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.EJ.Mvc, Version=13.2500.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.EJ.Olap, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
-    <Reference Include="Syncfusion.Grid.MVC, Version=13.2500.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\13.2.0.34\Assemblies\MVC\MVC5\Syncfusion.Grid.MVC.dll</HintPath>
-    </Reference>
+    <Reference Include="Syncfusion.EJ.ReportViewer, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Gauge.Wpf, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.MVC, Version=13.2500.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Linq.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Olap.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Pdf.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.PivotAnalysis.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.PMML.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Presentation.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.ReportControls.Wpf, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.ReportWriter.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SFMaps.WPF, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Wpf, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.XlsIO.Base, Version=13.2450.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -183,7 +199,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\JsonNetResult.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -199,9 +217,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ej\web\bootstrap-theme\ej.theme.less" />
     <Content Include="Content\ej\web\bootstrap-theme\ej.theme.min.css" />
     <Content Include="Content\ej\web\bootstrap-theme\ej.web.all.css" />
     <Content Include="Content\ej\web\bootstrap-theme\ej.web.all.min.css" />
@@ -222,7 +243,10 @@
     <Content Include="Content\ej\web\common-images\colorpicker_light.png" />
     <Content Include="Content\ej\web\common-images\diagram_context.png" />
     <Content Include="Content\ej\web\common-images\diagram_context1.png" />
+    <Content Include="Content\ej\web\common-images\ejicons.eot" />
     <Content Include="Content\ej\web\common-images\ejicons.svg" />
+    <Content Include="Content\ej\web\common-images\ejicons.ttf" />
+    <Content Include="Content\ej\web\common-images\ejicons.woff" />
     <Content Include="Content\ej\web\common-images\maps\Arrow_Bootom.png" />
     <Content Include="Content\ej\web\common-images\maps\Arrow_Bootom_hover.png" />
     <Content Include="Content\ej\web\common-images\maps\Arrow_Left.png" />
@@ -265,7 +289,10 @@
     <Content Include="Content\ej\web\common-images\ribbon\Browser.png" />
     <Content Include="Content\ej\web\common-images\ribbon\Check.png" />
     <Content Include="Content\ej\web\common-images\ribbon\Diet.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.eot" />
     <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.svg" />
+    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.ttf" />
+    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.woff" />
     <Content Include="Content\ej\web\common-images\ribbon\gallery.png" />
     <Content Include="Content\ej\web\common-images\ribbon\Gantt.png" />
     <Content Include="Content\ej\web\common-images\ribbon\paste.png" />
@@ -282,10 +309,14 @@
     <Content Include="Content\ej\web\common-images\spreadsheet\Down_Arrow.cur" />
     <Content Include="Content\ej\web\common-images\spreadsheet\Draw_Border.cur" />
     <Content Include="Content\ej\web\common-images\spreadsheet\Draw_Border_Grid.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.eot" />
     <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.svg" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.ttf" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.woff" />
     <Content Include="Content\ej\web\common-images\spreadsheet\Format_Painter.cur" />
     <Content Include="Content\ej\web\common-images\spreadsheet\Right_Arrow.cur" />
     <Content Include="Content\ej\web\common-images\spreadsheet\sprites.png" />
+    <Content Include="Content\ej\web\default-theme\ej.theme.less" />
     <Content Include="Content\ej\web\default-theme\ej.theme.min.css" />
     <Content Include="Content\ej\web\default-theme\ej.web.all.css" />
     <Content Include="Content\ej\web\default-theme\ej.web.all.min.css" />
@@ -303,8 +334,11 @@
     <Content Include="Content\ej\web\default-theme\images\toolbar_icons.png" />
     <Content Include="Content\ej\web\default-theme\images\ui-icon.png" />
     <Content Include="Content\ej\web\default-theme\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\ej.widgets.core.bootstrap.less" />
     <Content Include="Content\ej\web\ej.widgets.core.bootstrap.min.css" />
+    <Content Include="Content\ej\web\ej.widgets.core.less" />
     <Content Include="Content\ej\web\ej.widgets.core.min.css" />
+    <Content Include="Content\ej\web\flat-azure-dark\ej.theme.less" />
     <Content Include="Content\ej\web\flat-azure-dark\ej.theme.min.css" />
     <Content Include="Content\ej\web\flat-azure-dark\ej.web.all.css" />
     <Content Include="Content\ej\web\flat-azure-dark\ej.web.all.min.css" />
@@ -322,6 +356,7 @@
     <Content Include="Content\ej\web\flat-azure-dark\images\toolbar_icons.png" />
     <Content Include="Content\ej\web\flat-azure-dark\images\ui-icon.png" />
     <Content Include="Content\ej\web\flat-azure-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-lime-dark\ej.theme.less" />
     <Content Include="Content\ej\web\flat-lime-dark\ej.theme.min.css" />
     <Content Include="Content\ej\web\flat-lime-dark\ej.web.all.css" />
     <Content Include="Content\ej\web\flat-lime-dark\ej.web.all.min.css" />
@@ -340,6 +375,7 @@
     <Content Include="Content\ej\web\flat-lime-dark\images\transparent.png" />
     <Content Include="Content\ej\web\flat-lime-dark\images\ui-icon.png" />
     <Content Include="Content\ej\web\flat-lime-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-lime\ej.theme.less" />
     <Content Include="Content\ej\web\flat-lime\ej.theme.min.css" />
     <Content Include="Content\ej\web\flat-lime\ej.web.all.css" />
     <Content Include="Content\ej\web\flat-lime\ej.web.all.min.css" />
@@ -358,6 +394,7 @@
     <Content Include="Content\ej\web\flat-lime\images\transparent.png" />
     <Content Include="Content\ej\web\flat-lime\images\ui-icon.png" />
     <Content Include="Content\ej\web\flat-lime\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-saffron-dark\ej.theme.less" />
     <Content Include="Content\ej\web\flat-saffron-dark\ej.theme.min.css" />
     <Content Include="Content\ej\web\flat-saffron-dark\ej.web.all.css" />
     <Content Include="Content\ej\web\flat-saffron-dark\ej.web.all.min.css" />
@@ -376,6 +413,7 @@
     <Content Include="Content\ej\web\flat-saffron-dark\images\transparent.png" />
     <Content Include="Content\ej\web\flat-saffron-dark\images\ui-icon.png" />
     <Content Include="Content\ej\web\flat-saffron-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-saffron\ej.theme.less" />
     <Content Include="Content\ej\web\flat-saffron\ej.theme.min.css" />
     <Content Include="Content\ej\web\flat-saffron\ej.web.all.css" />
     <Content Include="Content\ej\web\flat-saffron\ej.web.all.min.css" />
@@ -394,6 +432,7 @@
     <Content Include="Content\ej\web\flat-saffron\images\transparent.png" />
     <Content Include="Content\ej\web\flat-saffron\images\ui-icon.png" />
     <Content Include="Content\ej\web\flat-saffron\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-azure-dark\ej.theme.less" />
     <Content Include="Content\ej\web\gradient-azure-dark\ej.theme.min.css" />
     <Content Include="Content\ej\web\gradient-azure-dark\ej.web.all.css" />
     <Content Include="Content\ej\web\gradient-azure-dark\ej.web.all.min.css" />
@@ -411,6 +450,7 @@
     <Content Include="Content\ej\web\gradient-azure-dark\images\toolbar_icons.png" />
     <Content Include="Content\ej\web\gradient-azure-dark\images\ui-icon.png" />
     <Content Include="Content\ej\web\gradient-azure-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-azure\ej.theme.less" />
     <Content Include="Content\ej\web\gradient-azure\ej.theme.min.css" />
     <Content Include="Content\ej\web\gradient-azure\ej.web.all.css" />
     <Content Include="Content\ej\web\gradient-azure\ej.web.all.min.css" />
@@ -428,6 +468,7 @@
     <Content Include="Content\ej\web\gradient-azure\images\toolbar_icons.png" />
     <Content Include="Content\ej\web\gradient-azure\images\ui-icon.png" />
     <Content Include="Content\ej\web\gradient-azure\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-lime-dark\ej.theme.less" />
     <Content Include="Content\ej\web\gradient-lime-dark\ej.theme.min.css" />
     <Content Include="Content\ej\web\gradient-lime-dark\ej.web.all.css" />
     <Content Include="Content\ej\web\gradient-lime-dark\ej.web.all.min.css" />
@@ -445,6 +486,7 @@
     <Content Include="Content\ej\web\gradient-lime-dark\images\toolbar_icons.png" />
     <Content Include="Content\ej\web\gradient-lime-dark\images\ui-icon.png" />
     <Content Include="Content\ej\web\gradient-lime-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-lime\ej.theme.less" />
     <Content Include="Content\ej\web\gradient-lime\ej.theme.min.css" />
     <Content Include="Content\ej\web\gradient-lime\ej.web.all.css" />
     <Content Include="Content\ej\web\gradient-lime\ej.web.all.min.css" />
@@ -462,6 +504,7 @@
     <Content Include="Content\ej\web\gradient-lime\images\toolbar_icons.png" />
     <Content Include="Content\ej\web\gradient-lime\images\ui-icon.png" />
     <Content Include="Content\ej\web\gradient-lime\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\ej.theme.less" />
     <Content Include="Content\ej\web\gradient-saffron-dark\ej.theme.min.css" />
     <Content Include="Content\ej\web\gradient-saffron-dark\ej.web.all.css" />
     <Content Include="Content\ej\web\gradient-saffron-dark\ej.web.all.min.css" />
@@ -479,6 +522,7 @@
     <Content Include="Content\ej\web\gradient-saffron-dark\images\toolbar_icons.png" />
     <Content Include="Content\ej\web\gradient-saffron-dark\images\ui-icon.png" />
     <Content Include="Content\ej\web\gradient-saffron-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-saffron\ej.theme.less" />
     <Content Include="Content\ej\web\gradient-saffron\ej.theme.min.css" />
     <Content Include="Content\ej\web\gradient-saffron\ej.web.all.css" />
     <Content Include="Content\ej\web\gradient-saffron\ej.web.all.min.css" />
@@ -504,48 +548,32 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\activiteitViewModel.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap-notify.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\ej\web\bootstrap-theme\ej.theme.less" />
-    <Content Include="Content\ej\web\common-images\ejicons.eot" />
-    <Content Include="Content\ej\web\common-images\ejicons.ttf" />
-    <Content Include="Content\ej\web\common-images\ejicons.woff" />
-    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.eot" />
-    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.ttf" />
-    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.woff" />
-    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.eot" />
-    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.ttf" />
-    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.woff" />
-    <Content Include="Content\ej\web\default-theme\ej.theme.less" />
-    <Content Include="Content\ej\web\ej.widgets.core.bootstrap.less" />
-    <Content Include="Content\ej\web\ej.widgets.core.less" />
-    <Content Include="Content\ej\web\flat-azure-dark\ej.theme.less" />
-    <Content Include="Content\ej\web\flat-lime-dark\ej.theme.less" />
-    <Content Include="Content\ej\web\flat-lime\ej.theme.less" />
-    <Content Include="Content\ej\web\flat-saffron-dark\ej.theme.less" />
-    <Content Include="Content\ej\web\flat-saffron\ej.theme.less" />
-    <Content Include="Content\ej\web\gradient-azure-dark\ej.theme.less" />
-    <Content Include="Content\ej\web\gradient-azure\ej.theme.less" />
-    <Content Include="Content\ej\web\gradient-lime-dark\ej.theme.less" />
-    <Content Include="Content\ej\web\gradient-lime\ej.theme.less" />
-    <Content Include="Content\ej\web\gradient-saffron-dark\ej.theme.less" />
-    <Content Include="Content\ej\web\gradient-saffron\ej.theme.less" />
     <Content Include="Scripts\canvg.js" />
+    <Content Include="Scripts\default.js" />
+    <Content Include="Scripts\ej.unobtrusive.min.js" />
+    <Content Include="Scripts\ej.web.all.min.js" />
+    <Content Include="Scripts\ej.widget.angular.min.js" />
+    <Content Include="Scripts\ej.widget.ko.min.js" />
+    <Content Include="Scripts\ej\canvg.js" />
     <Content Include="Scripts\ej\cultures\globalize.culture.de-DE.min.js" />
     <Content Include="Scripts\ej\cultures\globalize.culture.en-US.min.js" />
     <Content Include="Scripts\ej\cultures\globalize.culture.es-ES.min.js" />
     <Content Include="Scripts\ej\cultures\globalize.culture.fr-FR.min.js" />
     <Content Include="Scripts\ej\cultures\globalize.culture.vi-VN.min.js" />
     <Content Include="Scripts\ej\cultures\globalize.culture.zh-CN.min.js" />
+    <Content Include="Scripts\ej\data.js" />
     <Content Include="Scripts\ej\ej.unobtrusive.min.js" />
     <Content Include="Scripts\ej\ej.web.all.min.js" />
     <Content Include="Scripts\ej\ej.widget.angular.min.js" />
     <Content Include="Scripts\ej\ej.widget.ko.min.js" />
     <Content Include="Scripts\excanvas.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
@@ -556,17 +584,36 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jsondata.min.js" />
+    <Content Include="Scripts\jsondatachart.js" />
+    <Content Include="Scripts\jsongridmerge.js" />
+    <Content Include="Scripts\jsonscheduledata.js" />
+    <Content Include="Scripts\jsonTabWiz.min.js" />
     <Content Include="Scripts\jsrender.min.js" />
-    <Content Include="Scripts\knockout-3.3.0.debug.js" />
-    <Content Include="Scripts\knockout-3.3.0.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.debug.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\knockout.min.js" />
+    <Content Include="Scripts\largedata.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\onlinedata.js" />
+    <Content Include="Scripts\otherProducts.js" />
+    <Content Include="Scripts\path.js" />
+    <Content Include="Scripts\properties.js" />
+    <Content Include="Scripts\rangeNavigatorSource.fr-FR.js" />
+    <Content Include="Scripts\require.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\rgbcolor.js" />
+    <Content Include="Scripts\sampleslist.js" />
+    <Content Include="Scripts\templatelocaldata.js" />
+    <Content Include="Scripts\treemapdata.js" />
+    <Content Include="Scripts\xljsondata.js" />
+    <Content Include="Scripts\ZeroClipboard.js" />
+    <Content Include="Scripts\ZeroClipboard.swf" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -606,6 +653,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\CodeMirror\" />
+    <Folder Include="Scripts\cultures\" />
+    <Folder Include="Scripts\MapsData\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -17,8 +17,8 @@ namespace SyncKnockout.Models
     public class ActiviteitBestedeTijd
     {
         public Int32 Id { get; set; }
-        //public DateTime Date { get; set; }
-        public TestEnum Testenum { get; set; }
+        public DateTime Date { get; set; }
+        public String Testenum { get; set; }
         public String Oms { get; set; }
     }
 
