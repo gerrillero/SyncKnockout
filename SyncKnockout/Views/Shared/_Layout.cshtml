@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,9 +6,10 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     <link href="~/Content/ej/web/ej.widgets.core.bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/ej/web/flat-saffron/ej.web.all.min.css" rel="stylesheet" />
+	 	@Styles.Render("~/Content/ej/web/Gradient-saffron/ej.web.all.min.css")
     <link href="~/Content/ej/web/flat-saffron/ej.theme.min.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
+      @Scripts.Render("~/Scripts/jquery-3.0.0.min.js")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -43,7 +44,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     <script src="~/scripts/jquery.validate.min.js"></script>
     <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/Scripts/jquery.easing.1.3.min.js"></script>
+
     <script src="~/Scripts/jquery.globalize.min.js"></script>
     <script src="~/Scripts/cultures/globalize.culture.es-ES.min.js"></script>
     <script src="~/Scripts/jsrender.min.js"></script>

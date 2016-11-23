@@ -33,6 +33,21 @@ namespace SyncKnockout.Controllers
             tijden.Add(new ActiviteitBestedeTijd { Id = 2,  Testenum = "test2", Date = new DateTime(2015, 10, 15), Oms = "" });
             tijden.Add(new ActiviteitBestedeTijd { Id = 3, Testenum = "test3", Date = DateTime.Now, Oms = "Tak asdh iasdhiashfd iai sadhfiasgdfiuasgdiuf." });
 
+            List<LocatieViewModel> locaties = new List<LocatieViewModel>();
+            for (int i = 0; i < 5; i++)
+            {
+                AdresViewModel adres = new AdresViewModel { Id = Guid.NewGuid(), Huisnummer = i + 1, Postcode = "111" + i + "AA", Straatnaam = "Straatnaam " + (i+1),
+                    Woonplaats = "Woonplaats " + (i+1), Land = Land.land1  };
+                LocatieViewModel loc = new LocatieViewModel();
+                loc.Id = Guid.NewGuid();
+                loc.Adres = adres;
+                loc.Toelichting = "Tolichting " + i;
+
+                locaties.Add(loc);
+
+            }
+
+            model.Locaties = locaties;
             model.Tijden = tijden;
 
             return View(model);

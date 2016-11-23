@@ -1,4 +1,4 @@
-﻿@model SyncKnockout.Models.ActiviteitViewModel
+@model SyncKnockout.Models.ActiviteitViewModel
 @using System.Activities.Expressions;
 @using System.Web.Script.Serialization;
 @using Newtonsoft.Json
@@ -12,22 +12,89 @@
 }
 
 <h2>@ViewBag.Title.</h2>
-<form method="post">
+<form>
     <input class="form-control" type="text" data-bind="value: Onderwerp" />
     <br />
     <input id="UitgevoerdVoor" data-bind='ejDropDownList:{ dataSource: dataGebruikers, fields: { id: "Id", text: "Gebruikersnaam", value: "Id" }, value: dataUitgevoerdVoor, showCheckbox: true, allowMultiSelection: true, width: "400px" }'>
     <br />
     <br />
-    <div id="GridTijden" data-bind="ejGrid: { dataSource: dataTijden, columns: gridColumns, toolbarSettings: {showToolbar: true, toolbarItems: ['add', 'edit', 'update', 'delete', 'cancel'] }, editSettings: {allowEditing: true,allowAdding: true,allowDeleting: true}, allowSorting: true }">
+</form>
+    <div id="GridTijden" data-bind="ejGrid: { dataSource: dataTijden, columns: gridColumns,
+            contextClick : 'click', contextMenuSettings : {enableContextMenu : true, contextMenuItems:['Add Record','Edit Record','Delete Record']},
+                                    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true }, allowSorting: true }">
     </div>
     <br />
+    <div id="GridLocaties" class="he-grid" data-bind="ejGrid: { dataSource: dataLocaties,
+                 editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true, showDeleteConfirmDialog: true, allowEditOnDblClick: false,
+                                  editMode : 'inlineformtemplate',
+			                      inlineFormTemplateID : '#template',
+                 },
+                 allowSorting: true, allowResizing: true, locale: 'nl-NL', allowTextWrap: true,
+                 toolbarSettings: { showToolbar: true, toolbarItems: [ej.Grid.ToolBarItems.Add, ej.Grid.ToolBarItems.Edit, ej.Grid.ToolBarItems.Delete, ej.Grid.ToolBarItems.Update, ej.Grid.ToolBarItems.Cancel] },
+                 columns:[  { field: 'Id', isPrimaryKey: true, visible: false },
+                            { field: 'Adres.Id', visible: false },
+                            { field: 'Adres.Huisnummer', editType: 'numericedit', width: '8%' },
+                            { field: 'Adres.Land', editType: ej.Grid.EditingType.Dropdown, width: '12%' },
+                            { field: 'Adres.Straatnaam', editType: ej.Grid.EditingType.String, width: '25%' },
+                            { field: 'Adres.Woonplaats', editType: ej.Grid.EditingType.String, width: '15%' },
+                            { field: 'Toelichting', editType: ej.Grid.EditingType.String, width: '25%' },
+                           ],
+                   actionComplete : 'actionComplete'
+
+                  }"></div>
+
+    <br />
+    <br />
     <input class="btn btn-primary" type="submit" data-bind="click: Save" value="Save" />
-</form>
+
+
+@*{ field: 'Adres.Land', editType: ej.Grid.EditingType.Dropdown, dataSource: ddlLanden, fields: { value: 'value', text: 'text' }, width: '12%', validationRules: {required: true} },*@
 
 @section scripts {
 
     <script src="~/Scripts/activiteitViewModel.js"></script>
+
+<script id="template" type="text/template">
+        <table cellspacing="10">
+            <tr>
+                <td>Straat</td>
+                <td>
+                    <input type="hidden" id="Adres.Id" name="Adres.Id" value="{{:Adres.Id}}" />
+                    <input type="text" id="Adres.Straatnaam" name="Adres.Straatnaam" value="{{:Adres.Straatnaam}}" />
+                </td>
+                <td>Huisnummer</td>
+                <td>
+                    <input id="Adres.Huisnummer" name="Adres.Huisnummer" value="{{:Adres.Huisnummer}}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Postcode</td>
+                <td>
+                    @*<input type="text" id="Adres.Postcode" name="Adres.Postcode" value="{{:Adres.Postcode}}" />*@
+                </td>
+                <td>Land: {{:Adres.Land}}</td>
+                <td>
+                    <input id="Adres.Land" name="Adres.Land" value="{{:Adres.Land}}" />
+                    @*<select id="Adres.Land" name="Adres.Land">
+                        
+                    </select>*@
+                </td>
+            </tr>
+        </table>
+</script>
+
     <script type="text/javascript">
+
+        var ddlLanden = [{ text: "Land 1", value: 1111 }, { text: "Land 2", value: 2222 }, { text: "Land 3", value: 3333 }];
+
+
+
+        function click(args) {
+            debugger;
+            this.hideColumns("Testenum")
+        }
+
+
         var testenum = [{ text: "test1", value: "text1" }, { text: "test2", value: "text2" }, { text: "test3", value: "text3" }];
 
         var gridColumns = [
@@ -36,6 +103,7 @@
               { field: "Testenum", headerText: "Test enum", editType: ej.Grid.EditingType.Dropdown, dataSource: testenum, value: testenum },
               { field: "Date", headerText: "Datum", editType: ej.Grid.EditingType.DatePicker, format: "{0:dd-MM-yyyy}" }
         ];
+
         //$(function () {
             // DataManager creation
             //var dataManger = ej.DataManager({

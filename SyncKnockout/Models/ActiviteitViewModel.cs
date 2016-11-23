@@ -13,5 +13,6 @@ namespace SyncKnockout.Models
         public String UitgevoerdVoor { get; set; }
         public List<ActiviteitGebruikerViewModel> Gebruikers { get; set; }
         public List<ActiviteitBestedeTijd> Tijden { get; set; }
+        public List<LocatieViewModel> Locaties { get; set; }
     }
 }
