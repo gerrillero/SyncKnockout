@@ -1,4 +1,6 @@
-﻿var ObjectState = {
+﻿// https://help.syncfusion.com/api/js/ejgrid#members:columns-edittemplate
+
+var ObjectState = {
     Unchanged: 0,
     Added: 1,
     Modified: 2,
@@ -43,6 +45,14 @@ ActiviteitViewModel = function (data) {
     dataLocaties = ko.observableArray(data.Locaties);
     self.Locaties(dataLocaties);
 
+
+    btnZoek = function () {
+        debugger;
+        var test = $(".adres");
+        $(".adres").show();
+    };
+
+
     var flag = -1;
     //var deletedTijden = [];
     actionBegin = function (args) {
@@ -76,6 +86,7 @@ ActiviteitViewModel = function (data) {
         if (args.requestType == "beginedit" || args.requestType == "add") {
             debugger;
             $("#Adres\\.Land").ejDropDownList({
+                value: 2222,
                 dataSource: ddlLanden,
                 fields: { value: 'value', text: 'text' },
                 width: '100%',

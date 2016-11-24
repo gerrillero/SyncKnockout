@@ -33,11 +33,11 @@
                  toolbarSettings: { showToolbar: true, toolbarItems: [ej.Grid.ToolBarItems.Add, ej.Grid.ToolBarItems.Edit, ej.Grid.ToolBarItems.Delete, ej.Grid.ToolBarItems.Update, ej.Grid.ToolBarItems.Cancel] },
                  columns:[  { field: 'Id', isPrimaryKey: true, visible: false },
                             { field: 'Adres.Id', visible: false },
-                            { field: 'Adres.Huisnummer', editType: 'numericedit', width: '8%' },
-                            { field: 'Adres.Land', editType: ej.Grid.EditingType.Dropdown, width: '12%' },
-                            { field: 'Adres.Straatnaam', editType: ej.Grid.EditingType.String, width: '25%' },
-                            { field: 'Adres.Woonplaats', editType: ej.Grid.EditingType.String, width: '15%' },
-                            { field: 'Toelichting', editType: ej.Grid.EditingType.String, width: '25%' },
+                            { field: 'Adres.Huisnummer', editType: 'numericedit', width: '0', visible: false },
+                            { field: 'Adres.Land', editType: ej.Grid.EditingType.Dropdown, width: '0', visible: false },
+                            { field: 'Adres.Straatnaam', editType: ej.Grid.EditingType.String, width: '50%' },
+                            { field: 'Adres.Woonplaats', editType: ej.Grid.EditingType.String, width: '0', visible: false },
+                            { field: 'Toelichting', editType: ej.Grid.EditingType.String, width: '50%' },
                            ],
                    actionComplete : 'actionComplete'
 
@@ -66,8 +66,12 @@
                 <td>
                     <input id="Adres.Huisnummer" name="Adres.Huisnummer" value="{{:Adres.Huisnummer}}" />
                 </td>
+                <td>
+                    <button type="button" onclick="btnZoek();">Zoek</button>
+                </td>
             </tr>
-            <tr>
+       
+                <tr class="adres" style="display:none;">
                 <td>Postcode</td>
                 <td>
                     @*<input type="text" id="Adres.Postcode" name="Adres.Postcode" value="{{:Adres.Postcode}}" />*@
@@ -75,9 +79,6 @@
                 <td>Land: {{:Adres.Land}}</td>
                 <td>
                     <input id="Adres.Land" name="Adres.Land" value="{{:Adres.Land}}" />
-                    @*<select id="Adres.Land" name="Adres.Land">
-                        
-                    </select>*@
                 </td>
             </tr>
         </table>
